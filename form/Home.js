@@ -29,7 +29,7 @@
  } from 'react-native';
  import FontAwesome5Icon from 'react-native-vector-icons/FontAwesome5';
 // https://lh3.googleusercontent.com/proxy/sVyDvPsVxW8s4NODnkmMxA4Mo7Ir_AGSAOhAesgzBwd8hRoCFFdhR-XVhCVXUX4rQYoj8IUHfGzsY1Mzf0foMcZfiHyLn2XMnVape_l59suSIoKiIGMefyKEOAtImRqCW3MGZxI7rKKOLsq3JoyZtQ
- const Home  = () => {
+ const Home  = ({navigation}) => {
    return(
         <View style={styles.container}>
             <View style={styles.main}>
@@ -41,41 +41,31 @@
                 </View>
                 <View style={styles.bot}>
                     <TouchableOpacity style={styles.box}>
-                        <Image
+                        {/* <Image
                             style={styles.img}
-                            source={require('./image/Personal-QR.png')} 
-                        />
+                            source={require('../image/Personal-QR.png')} 
+                        /> */}
+                        <FontAwesome5Icon name='qrcode' size={50}  color='#19a2e0' style={styles.img}></FontAwesome5Icon>
                         <Text style={[styles.text,{marginTop:0}]}>Mã QR</Text>
                     </TouchableOpacity>
                     <TouchableOpacity style={styles.box}>
-                        <Image
-                            style={styles.img}
-                            source={require('./image/Health-declare.png')} 
-                        />
+                        <FontAwesome5Icon name='notes-medical' size={50}  color='#fe8700' style={styles.img}></FontAwesome5Icon>
                         <Text style={[styles.text,{marginTop:0}]}>Khai báo y tế</Text>
-                    </TouchableOpacity><TouchableOpacity style={styles.box}>
-                        <Image
-                            style={styles.img}
-                            source={require('./image/book.png')} 
-                        />
+                    </TouchableOpacity>
+                    <TouchableOpacity style={styles.box}>
+                        <FontAwesome5Icon name='book-open' size={50}  color='#30B55C' style={styles.img}></FontAwesome5Icon>
                         <Text style={[styles.text,{marginTop:0}]}>Hướng dẫn</Text>
-                    </TouchableOpacity><TouchableOpacity style={styles.box}>
-                        <Image
-                            style={styles.img}
-                            source={require('./image/Travel-location.png')} 
-                        />
+                    </TouchableOpacity>
+                    <TouchableOpacity style={styles.box}>
+                        <FontAwesome5Icon name='map-marker-alt' size={50}  color='#f8b123' style={styles.img}></FontAwesome5Icon>
                         <Text style={[styles.text,{marginTop:0}]}>Nơi đã đến</Text>
-                    </TouchableOpacity><TouchableOpacity style={styles.box}>
-                        <Image
-                            style={styles.img}
-                            source={require('./image/Infected-map.png')} 
-                        />
+                    </TouchableOpacity>
+                    <TouchableOpacity style={styles.box} onPress= {()=>navigation.navigate('Dữ liệu covid')}>
+                        <FontAwesome5Icon name='chart-bar' size={50}  color='#448aff' style={styles.img}></FontAwesome5Icon>
                         <Text style={[styles.text,{marginTop:0}]}>Dữ liệu covid-19</Text>
-                    </TouchableOpacity><TouchableOpacity style={styles.box}>
-                        <Image
-                            style={styles.img}
-                            source={require('./image/Report.png')} 
-                        />
+                    </TouchableOpacity>
+                    <TouchableOpacity style={styles.box} onPress= {()=>navigation.navigate('Thông báo')}>
+                        <FontAwesome5Icon name='comment-dots' size={50}  color='#ef6188' style={styles.img}></FontAwesome5Icon>
                         <Text style={[styles.text,{marginTop:0}]}>Phản ánh</Text>
                     </TouchableOpacity>
                 </View>
@@ -136,6 +126,8 @@
     img:{
         height: 60,
         width: 60,
+        // backgroundColor: 'blue',
+        textAlign: 'center',
     },
     text: {
       fontSize: 18,  
