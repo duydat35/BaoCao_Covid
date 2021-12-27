@@ -6,26 +6,13 @@
  * @flow strict-local
  */
 
- import React, { useState, useEffect } from 'react';
+ import React from 'react';
  import {
-   SafeAreaView,
-   ScrollView,
-   StatusBar,
    StyleSheet,
-   Switch,
    Text,
-   TextInput,
-   TouchableHighlight,
    TouchableOpacity,
-   useColorScheme,
    View,
    Image,
-   FlatList,
-   SectionList,
-   ImageBackgroundComponent,
-   ImageBackground,
-   Pressable,
-   ActivityIndicator,
  } from 'react-native';
  import FontAwesome5Icon from 'react-native-vector-icons/FontAwesome5';
 // https://lh3.googleusercontent.com/proxy/sVyDvPsVxW8s4NODnkmMxA4Mo7Ir_AGSAOhAesgzBwd8hRoCFFdhR-XVhCVXUX4rQYoj8IUHfGzsY1Mzf0foMcZfiHyLn2XMnVape_l59suSIoKiIGMefyKEOAtImRqCW3MGZxI7rKKOLsq3JoyZtQ
@@ -64,7 +51,7 @@
                         <FontAwesome5Icon name='chart-bar' size={50}  color='#448aff' style={styles.img}></FontAwesome5Icon>
                         <Text style={[styles.text,{marginTop:0}]}>Dữ liệu covid-19</Text>
                     </TouchableOpacity>
-                    <TouchableOpacity style={styles.box} onPress= {()=>navigation.navigate('Thông báo')}>
+                    <TouchableOpacity style={styles.box}>
                         <FontAwesome5Icon name='comment-dots' size={50}  color='#ef6188' style={styles.img}></FontAwesome5Icon>
                         <Text style={[styles.text,{marginTop:0}]}>Phản ánh</Text>
                     </TouchableOpacity>

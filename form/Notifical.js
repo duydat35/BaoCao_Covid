@@ -1,27 +1,12 @@
 
- import { it } from 'date-fns/locale';
-import React, { useState, useEffect } from 'react';
+import React from 'react';
  import {
-   SafeAreaView,
-   ScrollView,
-   StatusBar,
    StyleSheet,
-   Switch,
    Text,
-   TextInput,
-   TouchableHighlight,
    TouchableOpacity,
-   useColorScheme,
    View,
    Image,
-   FlatList,
-   SectionList,
-   ImageBackgroundComponent,
-   ImageBackground,
-   Pressable,
-   ActivityIndicator,
  } from 'react-native';
- import FontAwesome5Icon from 'react-native-vector-icons/FontAwesome5';
 
  const Data = [
    {
@@ -54,7 +39,7 @@ import React, { useState, useEffect } from 'react';
    return(
         <View style={styles.container}>
             {Data.map((item) => (
-            <TouchableOpacity style={styles.noti} onPress={()=>navigation.navigate('Chi tiết',{
+            <TouchableOpacity style={styles.noti} onPress={()=>navigation.navigate('Chi tiết thông báo',{
               name: item.name,
               date: item.date,
               time: item.time,

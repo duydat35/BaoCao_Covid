@@ -1,10 +1,3 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- *
- * @format
- * @flow strict-local
- */
 
 import React from 'react';
 
@@ -12,12 +5,16 @@ import { NavigationContainer } from '@react-navigation/native';
 
 import { MainStackNavigator } from './form/stacknavigation';
 
+import  BottomTabNavigator  from './form/bottomnavigation';
+
+
 const App = ()  => {
   return (
       <NavigationContainer>
-        <MainStackNavigator />
+        <BottomTabNavigator/>
       </NavigationContainer>
-  );
-};
+  )
+}
 
 export default App;
+
