@@ -1,14 +1,14 @@
 import React from "react";
 import { View, Text, StyleSheet } from 'react-native'
-import Home from "./Home";
-import DataCovid from "./DataCovid";
-import Notifical from "./Notifical";
 
 import Icon2 from 'react-native-vector-icons/FontAwesome';
 
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 
 import { NavigatorHome,NavigatorNotifical,NavigatorNews } from "./stacknavigation";
+
+
+import Home from "./Home";
 
 const Tab = createBottomTabNavigator();
 
@@ -17,10 +17,11 @@ const color2="gray"; // màu hiển thị không được chọn
 
 const BottomTabNavigator = () => {
   return (
-    <Tab.Navigator screenOptions={{
+    <Tab.Navigator 
+    initialRouteName = {'Trang chủ'}
+    screenOptions={{
       tabBarShowLabel: false,
       headerShown: false,
-      
       tabBarStyle: {
           position: "absolute",
           bottom: 10,
@@ -61,7 +62,7 @@ const BottomTabNavigator = () => {
         tabBarIcon: ({focused})=>(
            <View style={styles.itemTab}>
            <Icon2 style={{color: focused? color1:color2}} name="newspaper-o" size={25}/>
-           <Text style={[styles.itemTab_text, {color: focused? color1:color2}]}>Thông báo</Text>
+           <Text style={[styles.itemTab_text, {color: focused? color1:color2}]}>Tin tức</Text>
            </View>
        )}}
       />
@@ -104,7 +105,7 @@ const styles = StyleSheet.create({
   },
 });
 
-export default BottomTabNavigator ;
+export { BottomTabNavigator };
 
 
 

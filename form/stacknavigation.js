@@ -8,6 +8,9 @@ import Notifical from "./Notifical";
 import NoticeDetails from "./NoticeDetails";
 import News from "./tintuc";
 import NewsDetails from "./chitiettintuc";
+import Tutorial from "./huongdan";
+import QRCode from "./qr";
+import Declare from "./khaibao"
 
 
 const Stack = createNativeStackNavigator();
@@ -15,10 +18,23 @@ const Stack = createNativeStackNavigator();
 const NavigatorHome = () => {
   return (
     <Stack.Navigator initialRouteName="Home">
-      <Stack.Screen  name="Home" component={Home}  
-        options={{ headerShown: false, }}
+      <Stack.Screen  
+      name="Home" component={Home}  
+      options={{ headerShown: false, }}
       />
-      <Stack.Screen name="Dữ liệu covid" component={DataCovid} />
+      <Stack.Screen 
+      name="Dữ liệu covid" component={DataCovid} 
+      />
+      <Stack.Screen 
+      name="Hướng dẫn" component={Tutorial} 
+      options={{ headerShown: false, }}
+      />
+      <Stack.Screen 
+      name="QR của tôi" component={QRCode} 
+      />
+      <Stack.Screen 
+      name="Khai báo y tế" component={Declare} 
+      />
     </Stack.Navigator>
   );
 }

@@ -27,7 +27,7 @@
                     />
                 </View>
                 <View style={styles.bot}>
-                    <TouchableOpacity style={styles.box}>
+                    <TouchableOpacity style={styles.box} onPress= {()=>navigation.navigate('QR của tôi')}>
                         {/* <Image
                             style={styles.img}
                             source={require('../image/Personal-QR.png')} 
@@ -35,11 +35,11 @@
                         <FontAwesome5Icon name='qrcode' size={50}  color='#19a2e0' style={styles.img}></FontAwesome5Icon>
                         <Text style={[styles.text,{marginTop:0}]}>Mã QR</Text>
                     </TouchableOpacity>
-                    <TouchableOpacity style={styles.box}>
+                    <TouchableOpacity style={styles.box} onPress= {()=>navigation.navigate('Khai báo y tế')}> 
                         <FontAwesome5Icon name='notes-medical' size={50}  color='#fe8700' style={styles.img}></FontAwesome5Icon>
                         <Text style={[styles.text,{marginTop:0}]}>Khai báo y tế</Text>
                     </TouchableOpacity>
-                    <TouchableOpacity style={styles.box}>
+                    <TouchableOpacity style={styles.box} onPress= {()=>navigation.navigate('Hướng dẫn')}>
                         <FontAwesome5Icon name='book-open' size={50}  color='#30B55C' style={styles.img}></FontAwesome5Icon>
                         <Text style={[styles.text,{marginTop:0}]}>Hướng dẫn</Text>
                     </TouchableOpacity>

@@ -7,11 +7,12 @@ import { MainStackNavigator } from './form/stacknavigation';
 
 import  BottomTabNavigator  from './form/bottomnavigation';
 
+import { StackNavigator } from './form/stack';
 
 const App = ()  => {
   return (
       <NavigationContainer>
-        <BottomTabNavigator/>
+        <StackNavigator />
       </NavigationContainer>
   )
 }
